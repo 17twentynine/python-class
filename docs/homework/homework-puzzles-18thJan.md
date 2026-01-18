@@ -35,6 +35,13 @@ while number > 1:
     pass
 ```
 
+### Verify Your Logic
+Try changing `number` to these values and see if you get the right answer:
+- **Input: 9** -> Answer: **19 steps**
+- **Input: 12** -> Answer: **9 steps**
+- **Input: 15** -> Answer: **17 steps**
+- **Input: 27** -> Answer: **111 steps** (It takes a long time!)
+
 ---
 
 ## Puzzle 2: The Magic Penny (Exponential Growth)
@@ -62,6 +69,12 @@ for day in range(1, 31):
     # Update 'money' here
     pass
 ```
+
+### Verify Your Logic
+Try changing the loop range to check these days:
+- **Day 10**: `$5.12`
+- **Day 20**: `$5,242.88` (Already 5 thousand!)
+- **Day 30**: `$5,368,709.12` (5 Million!)
 
 ---
 
@@ -99,3 +112,10 @@ while True:
     # 3. If not out, he slides down 4m
     pass
 ```
+
+### Verify Your Logic
+Change the well depth logic to `if depth >= 50:` etc. to test:
+- **Depth 10m** -> Answer: **6 days**
+- **Depth 20m** -> Answer: **16 days**
+- **Depth 50m** -> Answer: **46 days**
+- **Depth 100m** -> Answer: **96 days**
