@@ -1,8 +1,8 @@
-# Logische Puzzels: Drie voor Vandaag
+# Logische Puzzels: Vijf voor Vandaag
 Datum: 15 feb 2026
-Onderwerp: Loops & Voorwaarden
+Onderwerp: Loops, Voorwaarden & Twee Loops
 
-*Drie korte puzzels—iets simpeler dan de speltheorie van volgende week.*
+*Vijf puzzels—de laatste twee hebben twee loops nodig (genest of de een na de ander).*
 
 ## Puzzel 1: De Verzamelaar van Even Getallen
 **Het Verhaal**: Een robot moet langs dozen lopen genummerd 1, 2, 3, … tot 50. Hij mag alleen een doos meenemen als het nummer **even** is. Elk meegenomen getal telt hij op bij zijn lopende totaal.
@@ -82,4 +82,60 @@ for i in range(1, 11):
     pass
 
 print(f"Som van de eerste 10 oneven getallen: {totaal}")
+```
+
+---
+
+## Puzzel 4: De Som van de Tafel van Vermenigvuldiging
+**Het Verhaal**: Een 5×5 tafel van vermenigvuldiging heeft rijen 1 tot 5 en kolommen 1 tot 5. De cel in rij `r` en kolom `c` heeft de waarde `r * c`. De eerste rij is dus 1, 2, 3, 4, 5; de tweede 2, 4, 6, 8, 10; enz.
+
+**De Vraag**: Wat is de **som van alle 25 getallen** in deze tafel? Gebruik **twee loops**: een buitenste loop over de rijen (1 tot 5) en een binnenste loop over de kolommen (1 tot 5). Daarbinnen tel je `rij * kolom` op bij een lopend totaal.
+
+**Voorbeeld Test**:
+- Voor een 2×2 tafel (rijen 1–2, kolommen 1–2): waarden 1, 2, 2, 4 → som = **9**.
+
+**Hint**: `totaal = 0`, dan `for rij in range(1, 6):` en daarbinnen `for kolom in range(1, 6): totaal += rij * kolom`.
+
+**Controleer je Logica**:
+- 2×2 tafel: som = **9**.
+- 5×5 tafel: som = **225**.
+
+```python
+# Start Code
+totaal = 0
+
+for rij in range(1, 6):
+    for kolom in range(1, 6):
+        # Tel (rij * kolom) op bij totaal
+        pass
+
+print(f"Som van 5×5 tafel van vermenigvuldiging: {totaal}")
+```
+
+---
+
+## Puzzel 5: De Driehoek van Puntjes
+**Het Verhaal**: Puntjes liggen in een driehoek. Rij 1 heeft **1** puntje, rij 2 heeft **2** puntjes, rij 3 heeft **3**, rij 4 heeft **4** en rij 5 heeft **5**.
+
+**De Vraag**: Hoeveel puntjes zijn er **in totaal**? Gebruik **twee loops**: een buitenste loop over de rijen (1 tot 5). Voor elke rij een binnenste loop die `rij` keer draait en elke keer 1 bij een teller optelt (of tel in één keer `rij` bij het totaal op).
+
+**Voorbeeld Test**:
+- Als de driehoek maar 3 rijen had: 1 + 2 + 3 = **6** puntjes.
+
+**Hint**: `totaal = 0`. Buiten: `for rij in range(1, 6):`. Binnen: `for punt in range(rij): totaal += 1` (of gewoon `totaal += rij` in de buitenste loop—maar oefen met twee loops).
+
+**Controleer je Logica**:
+- Eerste 3 rijen: **6** puntjes.
+- Eerste 5 rijen: **15** puntjes (1+2+3+4+5).
+
+```python
+# Start Code
+totaal = 0
+
+for rij in range(1, 6):
+    for punt in range(rij):
+        # Tel 1 op voor elk puntje in deze rij
+        pass
+
+print(f"Totaal puntjes in driehoek (5 rijen): {totaal}")
 ```

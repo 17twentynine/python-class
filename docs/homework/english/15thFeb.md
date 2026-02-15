@@ -1,8 +1,8 @@
-# Logic Puzzles: Three for Today
+# Logic Puzzles: Five for Today
 Date: 15th Feb 2026
-Topic: Loops & Conditions
+Topic: Loops, Conditions & Two Loops
 
-*Three short puzzles—simpler than next week's game theory set.*
+*Five puzzles—the last two need two loops (nested or one after the other).*
 
 ## Puzzle 1: The Even Number Collector
 **The Story**: A robot is told to walk past boxes numbered 1, 2, 3, … up to 50. It may only pick up a box if the number on it is **even**. It adds each picked number to its running total.
@@ -82,4 +82,60 @@ for i in range(1, 11):
     pass
 
 print(f"Sum of first 10 odd numbers: {total}")
+```
+
+---
+
+## Puzzle 4: The Multiplication Table Sum
+**The Story**: A 5×5 multiplication table has rows 1 to 5 and columns 1 to 5. The cell in row `r` and column `c` holds the value `r * c`. So the first row is 1, 2, 3, 4, 5; the second is 2, 4, 6, 8, 10; and so on.
+
+**The Question**: What is the **sum of all 25 numbers** in this table? Use **two loops**: an outer loop over rows (1 to 5) and an inner loop over columns (1 to 5). Inside both, add `row * col` to a running total.
+
+**Example Test Case**:
+- For a 2×2 table (rows 1–2, cols 1–2): values are 1, 2, 2, 4 → sum = **9**.
+
+**Hint**: `total = 0`, then `for row in range(1, 6):` and inside it `for col in range(1, 6): total += row * col`.
+
+**Check Your Logic**:
+- 2×2 table: sum = **9**.
+- 5×5 table: sum = **225**.
+
+```python
+# Starting Code
+total = 0
+
+for row in range(1, 6):
+    for col in range(1, 6):
+        # Add (row * col) to total
+        pass
+
+print(f"Sum of 5×5 multiplication table: {total}")
+```
+
+---
+
+## Puzzle 5: The Triangle of Dots
+**The Story**: Dots are laid out in a triangle. Row 1 has **1** dot, row 2 has **2** dots, row 3 has **3** dots, row 4 has **4** dots, and row 5 has **5** dots.
+
+**The Question**: How many dots are there **in total**? Use **two loops**: an outer loop over rows (1 to 5). For each row, use an inner loop that runs `row` times and adds 1 to a counter (or add `row` to the total once per row).
+
+**Example Test Case**:
+- If the triangle had only 3 rows: 1 + 2 + 3 = **6** dots.
+
+**Hint**: `total = 0`. Outer: `for row in range(1, 6):`. Inner: `for dot in range(row): total += 1` (or simply `total += row` in the outer loop—but practice using two loops).
+
+**Check Your Logic**:
+- First 3 rows: **6** dots.
+- First 5 rows: **15** dots (1+2+3+4+5).
+
+```python
+# Starting Code
+total = 0
+
+for row in range(1, 6):
+    for dot in range(row):
+        # Add 1 for each dot in this row
+        pass
+
+print(f"Total dots in triangle (5 rows): {total}")
 ```
