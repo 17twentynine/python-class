@@ -18,6 +18,8 @@ y = (SIZE * CELL / 2) - row * CELL - CELL / 2
 
 We will use `SIZE = 16` (16×16 grid) and `CELL = 40` (each cell is 40 pixels) — giving a **640×640** window.
 
+> **Playing on the Raspberry Pi 7-inch screen?** It is only 600 pixels tall, so a 640×640 window won't fit. Change `CELL = 40` to `CELL = 30` — the board becomes 480×480 and everything else still works, because the window size is calculated from `SIZE * CELL`.
+
 ---
 
 ## Puzzle 1: Hello Turtle (Easy)
